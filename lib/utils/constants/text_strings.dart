@@ -11,4 +11,18 @@ class ETexts{
 
   static const String homeAppBarTitle = "Get your everything you need in mintues";
   static const String homeAppBarSubTitle = "Just Like That!";
+
+
+  static const String loginTitle = "Welcome back,";
+  static const String loginSubTitle = "Get ready for endless shopping and crazy offers.";
+  static const String email = "Email";
+  static const String email1 = "Email";
+  static const String password = "Password";
+  static const String password1 = "Password";
+  static const String rememberMe = "Remember Me";
+  static const String forgotPassword = "Forgot Password";
+  static const String signIn = "Sign In";
+  static const String createAccount = "Create Account";
+  static const String orSignInWith = "Or Sign In With";
+
 }

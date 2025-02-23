@@ -16,9 +16,11 @@ dependencies:
   url_launcher: ^6.3.1
   cupertino_icons: ^1.0.8
   iconsax: ^0.0.8
+  iconsax_plus: ^1.0.0
   get_storage: ^2.1.1
   get: ^4.7.2
   flutter_native_splash: ^2.4.4
+  smooth_page_indicator: ^1.2.0+3
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +37,9 @@ flutter:
      - assets/icons/facebook.png
      - assets/logos/logo-dark.png
      - assets/logos/logo-light.png
+     - assets/images/on_boarding_images/delivery.png
+     - assets/images/on_boarding_images/payment.png
+     - assets/images/on_boarding_images/shopping.png
 
 
 

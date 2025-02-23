@@ -8,17 +8,6 @@ class EColors{
   static const Color secondary = Color(0xFF7E57C2);
   static const Color accent = Color(0xFFBBDEFB);
 
-
-  static const Gradient linearGradient = LinearGradient(
-    begin: Alignment(0.0, 0.0),
-    end: Alignment(0.707, -0.707),
-    colors: [
-      Color(0xff3f51b5),
-      Color(0xff5c6bc0),
-      Color(0xff7986cb)
-    ]
-    
-  );
   //TextColors
   static const Color textPrimary = Color(0xFF333333);
   static const Color textSecondary = Color(0xFF6C7570);

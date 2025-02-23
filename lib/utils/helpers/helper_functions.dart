@@ -91,7 +91,7 @@ class EHelperFunctions{
     return MediaQuery.of(Get.context!).size.height;
   }
 
-  static double screeWidth(){
+  static double screenWidth(){
     return MediaQuery.of(Get.context!).size.width;
   }
 
