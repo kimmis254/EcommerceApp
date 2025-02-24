@@ -29,7 +29,7 @@ class ESocialButtons extends StatelessWidget {
           ),
         ),
 
-        const SizedBox(width: ESizes.spaceBtwItems),
+        const SizedBox(width: ESizes.spaceBtwItems * 2),
         Container(
           decoration: BoxDecoration(
             border: Border.all(color: EColors.grey),

@@ -25,4 +25,27 @@ class ETexts{
   static const String createAccount = "Create Account";
   static const String orSignInWith = "Or Sign In With";
 
+  static const String signUpTitle = "Sign Up Here";
+  static const String firstName = "First Name";
+  static const String lastName = "Last Name";
+  static const String userName = "UserName";
+  static const String phoneNumber = "Phone Number";
+  static const String iAgreeTo = "I Agree To";
+  static const String privacyPolicy = "Privacy Policy";
+  static const String and = "and";
+  static const String termsOfUse = "Terms of Use";
+  static const String orSignUpWith = "Or Sign Up With";
+
+
+  static const String confirmEmail = "Verify your email address";
+  static const String tContinue = "Continue";
+  static const String resendEmail = "Resend Email";
+  static const String yourAccountCreatedTitle = "Your account was successfully created";
+  static const String yourAccountCreatedSubTitle = "Welcome to Your Ultimate Shopping Destination. Your account is created. Get to experience shopping in Nyayo Estate at the comfort of your home";
+  static const String confirmEmailSubTitle = "Congratulations! Your account awaits."
+      " Verify your Email to start shopping and experience a World of Unlimited Deals and Amazing Offers.";
+
+
+
+
 }

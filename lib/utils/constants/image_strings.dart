@@ -12,5 +12,9 @@ class EImages {
   static const String onBoarding3 = "assets/images/on_boarding_images/delivery.png";
 
 
+  static const String verifyEmail = "assets/images/verify_email_images/verify_email.png";
+  static const String successScreen = "assets/images/verify_email_images/success.png";
+
+
 
 }

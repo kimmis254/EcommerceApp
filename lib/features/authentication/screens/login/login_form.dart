@@ -1,7 +1,11 @@
+import 'package:ecommerceapp/features/authentication/screens/signup/signup.dart';
+import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/constants/text_strings.dart';
 import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
 
@@ -25,9 +29,7 @@ class LoginForm extends StatelessWidget {
               decoration: InputDecoration(
                 prefix: Icon(Iconsax.direct_right),
                 labelText: ETexts.email,
-                labelStyle: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black
-                ),
+                floatingLabelStyle: TextStyle(color: dark ? EColors.white : EColors.black)
               ),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields),
@@ -35,9 +37,7 @@ class LoginForm extends StatelessWidget {
               decoration: InputDecoration(
                   prefix: Icon(Iconsax.password_check),
                   labelText: ETexts.password,
-                  labelStyle: TextStyle(
-                    color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black
-                  ),
+    floatingLabelStyle: TextStyle(color: dark ? EColors.white : EColors.black),
                   suffixIcon: Icon(Iconsax.eye_slash)),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields / 2),
@@ -66,7 +66,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                  onPressed: () {},
+                  onPressed: () => Get.to(() => const SignupScreen()),
                   child: Text(ETexts.createAccount)
               ),
             ),

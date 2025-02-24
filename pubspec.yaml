@@ -33,16 +33,34 @@ flutter:
   uses-material-design: true
 
   assets:
-     - assets/icons/google.png
-     - assets/icons/facebook.png
-     - assets/logos/logo-dark.png
-     - assets/logos/logo-light.png
-     - assets/images/on_boarding_images/delivery.png
-     - assets/images/on_boarding_images/payment.png
-     - assets/images/on_boarding_images/shopping.png
+    - assets/icons/google.png
+    - assets/icons/facebook.png
+    - assets/logos/logo-dark.png
+    - assets/logos/logo-light.png
+    - assets/images/on_boarding_images/delivery.png
+    - assets/images/on_boarding_images/payment.png
+    - assets/images/on_boarding_images/shopping.png
+    - assets/images/verify_email_images/verify_email.png
+    - assets/images/verify_email_images/success.png
 
-
-
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 300
+        - asset: assets/fonts/Poppins-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+          weight: 500
+          style: italic
+        - asset: assets/fonts/Poppins-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 800
 
 
 

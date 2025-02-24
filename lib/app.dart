@@ -14,6 +14,7 @@ class App extends StatelessWidget {
       theme:  EcommAppTheme.lightTheme,
       darkTheme: EcommAppTheme.darkTheme,
       home: const OnboardingScreen(),
+      debugShowCheckedModeBanner: false,
 
     );
   }
