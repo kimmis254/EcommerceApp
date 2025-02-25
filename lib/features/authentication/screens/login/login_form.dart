@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/bottom_navigation.dart';
 import 'package:ecommerceapp/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:ecommerceapp/features/authentication/screens/signup/signup.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
@@ -60,7 +61,7 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () {}, child: Text(ETexts.signIn)
+                  onPressed: () => Get.to(() => const BottomNavigation()), child: Text(ETexts.signIn)
               ),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields),
