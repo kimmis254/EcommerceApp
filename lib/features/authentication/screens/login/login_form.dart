@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:ecommerceapp/features/authentication/screens/signup/signup.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
@@ -51,7 +52,7 @@ class LoginForm extends StatelessWidget {
                   ],
                 ),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => const ForgotPasswordScreen()),
                     child: const Text(ETexts.forgotPassword))
               ],
             ),

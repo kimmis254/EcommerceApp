@@ -45,6 +45,12 @@ class ETexts{
   static const String confirmEmailSubTitle = "Congratulations! Your account awaits."
       " Verify your Email to start shopping and experience a World of Unlimited Deals and Amazing Offers.";
 
+  static const String forgotPasswordTitle = "Forgot Password";
+  static const String submit = "Submit";
+  static const String done = "Done";
+  static const String changePasswordTitle = "Reset your password";
+  static const String changePasswordSubTitle = "Your account security is our priority. We've sent you a secure link to change your password and keep your account protected";
+  static const String forgotPasswordSubTitle = "Don't worry, Everybody forgets their password. Input your email below and we'll send you a password reset link.";
 
 
 
