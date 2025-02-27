@@ -43,6 +43,7 @@ flutter:
     - assets/images/verify_email_images/verify_email.png
     - assets/images/verify_email_images/success.png
     - assets/images/verify_email_images/reset_password.png
+    - assets/images/categories/produce.png
 
   fonts:
     - family: Poppins

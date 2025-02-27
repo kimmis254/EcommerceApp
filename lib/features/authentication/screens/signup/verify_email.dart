@@ -1,4 +1,4 @@
-import 'package:ecommerceapp/common/widgets/success_screen.dart';
+import 'package:ecommerceapp/common/widgets/success_screen/success_screen.dart';
 import 'package:ecommerceapp/features/authentication/screens/login/login.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';

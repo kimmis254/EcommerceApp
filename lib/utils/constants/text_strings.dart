@@ -9,8 +9,8 @@ class ETexts{
   static const String onBoardingSubTitle2 = "Smooth and Seamless Transactions";
   static const String onBoardingSubTitle3 = "Delivered in just minutes";
 
-  static const String homeAppBarTitle = "Get your everything you need in mintues";
-  static const String homeAppBarSubTitle = "Just Like That!";
+  static const String homeAppBarTitle = "Good day for shopping!";
+  static const String homeAppBarSubTitle = "Wayne Kathanzu";
 
 
   static const String loginTitle = "Welcome back,";

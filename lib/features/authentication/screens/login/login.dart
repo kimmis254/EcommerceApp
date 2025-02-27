@@ -1,10 +1,9 @@
 import 'package:ecommerceapp/common/styles/spacing_styles.dart';
-import 'package:ecommerceapp/common/widgets/form_divider.dart';
-import 'package:ecommerceapp/common/widgets/social_buttons.dart';
+import 'package:ecommerceapp/common/widgets/login_signup/form_divider.dart';
+import 'package:ecommerceapp/common/widgets/login_signup/social_buttons.dart';
 import 'package:ecommerceapp/features/authentication/screens/login/login.dart';
 import 'package:ecommerceapp/features/authentication/screens/login/login_form.dart';
 import 'package:ecommerceapp/features/authentication/screens/login/login_header.dart';
-import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/constants/text_strings.dart';

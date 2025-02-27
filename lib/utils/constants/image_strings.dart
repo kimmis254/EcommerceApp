@@ -16,6 +16,8 @@ class EImages {
   static const String successScreen = "assets/images/verify_email_images/success.png";
   static const String resetScreen = "assets/images/verify_email_images/reset_password.png";
 
+  static const String produceIcon = "assets/images/categories/produce.png";
+
 
 
 }
