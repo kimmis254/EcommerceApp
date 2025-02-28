@@ -15,35 +15,71 @@ class BottomNavigation extends StatelessWidget {
 
     return Scaffold(
       bottomNavigationBar: Obx(
-            () => NavigationBar(
-          height: 80,
-          elevation: 0,
-          selectedIndex: controller.selectedIndex.value,
-          onDestinationSelected: (index) => controller.selectedIndex.value = index,
-          backgroundColor: darkMode ? EColors.black : EColors.white,
-          indicatorColor: darkMode ? EColors.white.withOpacity(0.1) : EColors.black.withOpacity(0.1),
-          destinations: [
-            NavigationDestination(
-              icon: const Icon(Iconsax.home),
-              selectedIcon: const Icon(Iconsax.home5, color: Colors.blue), // Filled icon when selected
-              label: 'Home',
-            ),
-            NavigationDestination(
-              icon: const Icon(Iconsax.shop),
-              selectedIcon: const Icon(Iconsax.shop5, color: Colors.blue), // Filled icon when selected
-              label: 'Store',
-            ),
-            NavigationDestination(
-              icon: const Icon(Iconsax.heart),
-              selectedIcon: const Icon(Iconsax.heart5, color: Colors.blue), // Filled icon when selected
-              label: 'Wishlist',
-            ),
-            NavigationDestination(
-              icon: const Icon(Iconsax.user),
-              selectedIcon: const Icon(Iconsax.user5, color: Colors.blue), // Filled icon when selected
-              label: 'Profile',
-            ),
-          ],
+            () => Container(
+          color: darkMode ? Colors.black : EColors.white, // Entire bar background
+          child: NavigationBar(
+            height: 80,
+            elevation: 0,
+            selectedIndex: controller.selectedIndex.value,
+            onDestinationSelected: (index) =>
+            controller.selectedIndex.value = index,
+            backgroundColor: darkMode ? Colors.black : EColors.white,
+            indicatorColor: EColors.primary.withOpacity(0.2), // Stronger highlight color
+            destinations: [
+              NavigationDestination(
+                icon: const Icon(Iconsax.home, color: Colors.grey),
+                selectedIcon: Container(
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: EColors.primary, // Solid primary color background
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Icon(Iconsax.home5, color: Colors.white),
+                ),
+                label: 'Home',
+              ),
+              NavigationDestination(
+                icon: const Icon(Iconsax.shop, color: Colors.grey),
+                selectedIcon: Container(
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: EColors.primary,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Icon(Iconsax.shop5, color: Colors.white),
+                ),
+                label: 'Store',
+              ),
+              NavigationDestination(
+                icon: const Icon(Iconsax.heart, color: Colors.grey),
+                selectedIcon: Container(
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: EColors.primary,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Icon(Iconsax.heart5, color: Colors.white),
+                ),
+                label: 'Wishlist',
+              ),
+              NavigationDestination(
+                icon: const Icon(Iconsax.user, color: Colors.grey),
+                selectedIcon: Container(
+                  padding:
+                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                  decoration: BoxDecoration(
+                    color: EColors.primary,
+                    borderRadius: BorderRadius.circular(24),
+                  ),
+                  child: const Icon(Iconsax.user, color: Colors.white),
+                ),
+                label: 'Profile',
+              ),
+            ],
+          ),
         ),
       ),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),

@@ -1,10 +1,14 @@
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:ecommerceapp/common/widgets/containers/circular_container.dart';
 import 'package:ecommerceapp/common/widgets/containers/primary_header_container.dart';
 import 'package:ecommerceapp/common/widgets/containers/search_container.dart';
 import 'package:ecommerceapp/common/widgets/image_texts/vertical_image_text.dart';
+import 'package:ecommerceapp/common/widgets/images/rounded_images.dart';
 import 'package:ecommerceapp/common/widgets/texts/section_heading.dart';
 import 'package:ecommerceapp/features/shop/screens/home/home.dart';
 import 'package:ecommerceapp/features/shop/screens/home/home_app_bar.dart';
 import 'package:ecommerceapp/features/shop/screens/home/home_categories.dart';
+import 'package:ecommerceapp/features/shop/screens/home/promo_slider.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
@@ -44,13 +48,22 @@ class HomeScreen extends StatelessWidget {
                 ],
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.all(ESizes.defaultSpace),
+              child: const  EPromoSlider(
+                banners: [
+                  EImages.banner1,
+                  EImages.banner2,
+                  EImages.banner3,
+                ],
+              )
+            )
           ],
         ),
       ),
     );
   }
 }
-
 
 
 

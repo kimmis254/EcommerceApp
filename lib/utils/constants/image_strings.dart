@@ -19,5 +19,10 @@ class EImages {
   static const String produceIcon = "assets/images/categories/produce.png";
 
 
+  static const String banner1 = "assets/images/banner_images/banner_1.png";
+  static const String banner2 = "assets/images/banner_images/banner_2.png";
+  static const String banner3 = "assets/images/banner_images/banner_3.png";
+
+
 
 }

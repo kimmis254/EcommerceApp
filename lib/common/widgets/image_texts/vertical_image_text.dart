@@ -41,7 +41,7 @@ class EVerticalImageText extends StatelessWidget {
                 child: Image(
                   image: AssetImage(image),
                   fit: BoxFit.contain,
-                  color: dark ? EColors.light : EColors.dark,
+                  color: dark ? EColors.dark : EColors.dark,
                 ),
               ),
             ),

@@ -21,6 +21,7 @@ dependencies:
   get: ^4.7.2
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.0+3
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -44,6 +45,7 @@ flutter:
     - assets/images/verify_email_images/success.png
     - assets/images/verify_email_images/reset_password.png
     - assets/images/categories/produce.png
+    - assets/images/banner_images/
 
   fonts:
     - family: Poppins
