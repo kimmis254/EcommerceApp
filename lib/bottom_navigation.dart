@@ -15,74 +15,72 @@ class BottomNavigation extends StatelessWidget {
 
     return Scaffold(
       bottomNavigationBar: Obx(
-            () => Container(
-          color: darkMode ? Colors.black : EColors.white, // Entire bar background
-          child: NavigationBar(
-            height: 80,
-            elevation: 0,
-            selectedIndex: controller.selectedIndex.value,
-            onDestinationSelected: (index) =>
-            controller.selectedIndex.value = index,
-            backgroundColor: darkMode ? Colors.black : EColors.white,
-            indicatorColor: EColors.primary.withOpacity(0.2), // Stronger highlight color
-            destinations: [
-              NavigationDestination(
-                icon: const Icon(Iconsax.home, color: Colors.grey),
-                selectedIcon: Container(
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: EColors.primary, // Solid primary color background
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  child: const Icon(Iconsax.home5, color: Colors.white),
+            () => Stack(
+          children: [
+            Positioned.fill(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: darkMode ? Colors.black : EColors.white, // Make sure the background is transparent
+                  boxShadow: [
+                    if (!darkMode) // Only show shadow in light mode
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 10,
+                        spreadRadius: 2,
+                      ),
+                  ],
                 ),
-                label: 'Home',
               ),
-              NavigationDestination(
-                icon: const Icon(Iconsax.shop, color: Colors.grey),
-                selectedIcon: Container(
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: EColors.primary,
-                    borderRadius: BorderRadius.circular(24),
+            ),
+            ClipRRect(
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+              child: NavigationBar(
+                height: 80,
+                elevation: 0,
+                selectedIndex: controller.selectedIndex.value,
+                onDestinationSelected: (index) =>
+                controller.selectedIndex.value = index,
+                backgroundColor: Colors.transparent, // Fully transparent
+                indicatorColor: EColors.primary.withOpacity(0.2), // Highlight effect
+                destinations: [
+                  NavigationDestination(
+                    icon: const Icon(Iconsax.home, color: Colors.grey),
+                    selectedIcon: _buildSelectedIcon(Iconsax.home5),
+                    label: 'Home',
                   ),
-                  child: const Icon(Iconsax.shop5, color: Colors.white),
-                ),
-                label: 'Store',
-              ),
-              NavigationDestination(
-                icon: const Icon(Iconsax.heart, color: Colors.grey),
-                selectedIcon: Container(
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: EColors.primary,
-                    borderRadius: BorderRadius.circular(24),
+                  NavigationDestination(
+                    icon: const Icon(Iconsax.shop, color: Colors.grey),
+                    selectedIcon: _buildSelectedIcon(Iconsax.shop5),
+                    label: 'Store',
                   ),
-                  child: const Icon(Iconsax.heart5, color: Colors.white),
-                ),
-                label: 'Wishlist',
-              ),
-              NavigationDestination(
-                icon: const Icon(Iconsax.user, color: Colors.grey),
-                selectedIcon: Container(
-                  padding:
-                  const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  decoration: BoxDecoration(
-                    color: EColors.primary,
-                    borderRadius: BorderRadius.circular(24),
+                  NavigationDestination(
+                    icon: const Icon(Iconsax.heart, color: Colors.grey),
+                    selectedIcon: _buildSelectedIcon(Iconsax.heart5),
+                    label: 'Wishlist',
                   ),
-                  child: const Icon(Iconsax.user, color: Colors.white),
-                ),
-                label: 'Profile',
+                  NavigationDestination(
+                    icon: const Icon(Iconsax.user, color: Colors.grey),
+                    selectedIcon: _buildSelectedIcon(Iconsax.user),
+                    label: 'Profile',
+                  ),
+                ],
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
+    );
+  }
+
+  Widget _buildSelectedIcon(IconData icon) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      decoration: BoxDecoration(
+        color: EColors.primary,
+        borderRadius: BorderRadius.circular(24),
+      ),
+      child: Icon(icon, color: Colors.white),
     );
   }
 }

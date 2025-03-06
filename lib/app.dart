@@ -14,6 +14,7 @@ class App extends StatelessWidget {
 
     // Set the system navigation bar color to match the theme
     SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
       systemNavigationBarColor: isDarkMode ? Colors.black : Colors.white,
       systemNavigationBarIconBrightness: isDarkMode ? Brightness.light : Brightness.dark,
     ));

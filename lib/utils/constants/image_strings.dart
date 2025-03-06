@@ -24,5 +24,8 @@ class EImages {
   static const String banner3 = "assets/images/banner_images/banner_3.png";
 
 
+  static const String kale = "assets/images/products/kale_product.png";
+
+
 
 }

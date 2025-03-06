@@ -4,6 +4,8 @@ import 'package:ecommerceapp/common/widgets/containers/primary_header_container.
 import 'package:ecommerceapp/common/widgets/containers/search_container.dart';
 import 'package:ecommerceapp/common/widgets/image_texts/vertical_image_text.dart';
 import 'package:ecommerceapp/common/widgets/images/rounded_images.dart';
+import 'package:ecommerceapp/common/widgets/layouts/grid_layout.dart';
+import 'package:ecommerceapp/common/widgets/product/product_card/product_card_vertical.dart';
 import 'package:ecommerceapp/common/widgets/texts/section_heading.dart';
 import 'package:ecommerceapp/features/shop/screens/home/home.dart';
 import 'package:ecommerceapp/features/shop/screens/home/home_app_bar.dart';
@@ -20,7 +22,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDarkMode = Theme
+        .of(context)
+        .brightness == Brightness.dark;
     return Scaffold(
+      backgroundColor: isDarkMode ? Colors.black : Colors.white,
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -50,13 +56,21 @@ class HomeScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.all(ESizes.defaultSpace),
-              child: const  EPromoSlider(
-                banners: [
-                  EImages.banner1,
-                  EImages.banner2,
-                  EImages.banner3,
+              child: Column(
+                children: [
+                  const EPromoSlider(
+                    banners: [
+                      EImages.banner1,
+                      EImages.banner2,
+                      EImages.banner3,
+                    ],
+                  ),
+                  const SizedBox(height: ESizes.spaceBtwSections),
+
+
+                  EGridLayout(itemCount: 4,itemBuilder: (_,index) => const EProductCardVertical()),
                 ],
-              )
+              ),
             )
           ],
         ),
@@ -64,6 +78,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
 
 
