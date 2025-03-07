@@ -1,3 +1,4 @@
+import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class ESectionHeading extends StatelessWidget {
@@ -10,16 +11,18 @@ class ESectionHeading extends StatelessWidget {
   final String title, buttonTitle;
   final void Function()? onPressed;
 
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Text(
-          'Popular Categories',
+          title,
           style: Theme.of(context).textTheme.headlineSmall!.apply(color: textColor),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
+        SizedBox(width: ESizes.spaceBtwItems * 5),
         if(showActionButton) TextButton(onPressed: onPressed, child: Text(buttonTitle)),
       ],
     );

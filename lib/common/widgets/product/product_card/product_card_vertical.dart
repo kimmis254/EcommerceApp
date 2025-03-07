@@ -3,6 +3,7 @@ import 'package:ecommerceapp/common/widgets/containers/rounded_container.dart';
 import 'package:ecommerceapp/common/widgets/icons/circular_icon.dart';
 import 'package:ecommerceapp/common/widgets/images/rounded_images.dart';
 import 'package:ecommerceapp/common/widgets/product/product_card/product_card_vertical.dart';
+import 'package:ecommerceapp/common/widgets/texts/brand_title_text_with_icon.dart';
 import 'package:ecommerceapp/common/widgets/texts/product_price.dart';
 import 'package:ecommerceapp/common/widgets/texts/product_title.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
@@ -34,11 +35,14 @@ class EProductCardVertical extends StatelessWidget {
               height: 180,
               padding: const EdgeInsets.all(ESizes.sm),
               backgroundColor: EHelperFunctions.isDarkMode(context)
-                  ? EColors.dark
-                  : EColors.light,
+                  ? EColors.black
+                  : EColors.white,
               child: Stack(
                 children: [
-                  ERoundedImage(imageUrl: EImages.kale, applyImageRadius: true),
+                  Padding(
+                    padding: const EdgeInsets.only(top: 40),
+                    child: ERoundedImage(imageUrl: EImages.kale, applyImageRadius: true,),
+                  ),
                   Positioned(
                     top: 10,
                     child: ERoundedContainer(
@@ -58,6 +62,7 @@ class EProductCardVertical extends StatelessWidget {
                   Positioned(
                       top: 0,
                       right: 0,
+                      left: 110,
                       child: const ECircularIcon(
                         icon: Iconsax.heart5,
                         color: Colors.red,
@@ -76,47 +81,38 @@ class EProductCardVertical extends StatelessWidget {
                     smallSize: true,
                   ),
                   const SizedBox(height: ESizes.spaceBtwItems / 2),
-                  Row(
-                    children: [
-                      Text(
-                        'FreshPoint',
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                      const SizedBox(width: ESizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: EColors.primary,
-                        size: ESizes.iconXs,
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      EProductPriceText(price: '25.0'),
-
-
-                      Container(
-                        decoration: BoxDecoration(
-                          color: EColors.dark,
-                          borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(ESizes.cardRadiusMd),
-                            bottomRight:
-                                Radius.circular(ESizes.productImageRadius),
-                          ),
-                        ),
-                        child: const SizedBox(
-                            width: ESizes.iconLg * 1.2,
-                            height: ESizes.iconLg * 1.2,
-                            child: Center(
-                                child: Icon(Iconsax.add, color: EColors.white))),
-                      ),
-                    ],
-                  )
+                  EBrandTitleWithVerifiedIcon(title: 'FreshPoint',),
                 ],
               ),
+            ),
+
+           const Spacer(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: ESizes.sm),
+                  child: EProductPriceText(price: '25.0'),
+                ),
+
+
+                Container(
+                  decoration: BoxDecoration(
+                    color: EColors.dark,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(ESizes.cardRadiusMd),
+                      bottomRight:
+                      Radius.circular(ESizes.productImageRadius),
+                    ),
+                  ),
+                  child: const SizedBox(
+                      width: ESizes.iconLg * 1.2,
+                      height: ESizes.iconLg * 1.2,
+                      child: Center(
+                          child: Icon(Iconsax.add, color: EColors.white))),
+                ),
+              ],
             )
           ],
         ),
@@ -124,5 +120,7 @@ class EProductCardVertical extends StatelessWidget {
     );
   }
 }
+
+
 
 

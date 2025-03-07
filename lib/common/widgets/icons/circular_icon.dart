@@ -32,8 +32,8 @@ class ECircularIcon extends StatelessWidget {
         color: backgroundColor != null
             ? backgroundColor!
             : EHelperFunctions.isDarkMode(context)
-                ? EColors.black.withOpacity(0.9)
-                : EColors.white.withOpacity(0.9),
+                ? Colors.transparent
+                : Colors.transparent,
       ),
       child: IconButton(
           onPressed: () {},
