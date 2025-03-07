@@ -25,6 +25,8 @@ class EImages {
 
 
   static const String kale = "assets/images/products/kale_product.png";
+  static const String banana = "assets/images/products/banana.png";
+  static const String tomato = "assets/images/products/tomato.png";
 
 
 
