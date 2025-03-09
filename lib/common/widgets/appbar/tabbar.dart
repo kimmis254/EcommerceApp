@@ -12,25 +12,14 @@ class ETabBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final dark = EHelperFunctions.isDarkMode(context);
 
-    return Container(
-      color: EColors.black, // Ensures background is fully black
-      child: Material(
-        color: Colors.transparent, // Prevents Material from overriding background
-        child: Container(
-          decoration: BoxDecoration(
-            color: EColors.black, // Explicitly sets background color
-          ),
-          child: TabBar(
-            tabs: tabs,
-            isScrollable: true,
-            indicator: BoxDecoration(), // Fully removes the indicator
-            indicatorColor: Colors.transparent, // Just in case
-            indicatorSize: TabBarIndicatorSize.label, // Prevents residual effects
-            labelColor: EColors.white,
-            unselectedLabelColor: EColors.darkGrey,
-
-          ),
-        ),
+    return Material(
+      color: dark ? EColors.black : EColors.white,
+      child: TabBar(
+        tabs: tabs,
+        isScrollable: true,
+        indicatorColor: EColors.primary,
+        labelColor: dark ? EColors.white : EColors.primary,
+        unselectedLabelColor: EColors.darkGrey,
       ),
     );
   }

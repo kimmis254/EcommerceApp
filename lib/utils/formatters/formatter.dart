@@ -7,7 +7,7 @@ class EFormatter{
    }
 
    static String formatCurrency(double amount){
-     return NumberFormat.currency(locale: 'en_KE', symbol: "\Ksh").format(amount);
+     return NumberFormat.currency(locale: 'en_KE', symbol: "Ksh").format(amount);
    }
 
    static String formatPhoneNumber(String phoneNumber){

@@ -29,5 +29,8 @@ class EImages {
   static const String tomato = "assets/images/products/tomato.png";
 
 
+  static const String user = "assets/images/common_images/user.png";
+
+
 
 }

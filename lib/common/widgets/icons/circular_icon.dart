@@ -1,8 +1,6 @@
-import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 class ECircularIcon extends StatelessWidget {
   const ECircularIcon({

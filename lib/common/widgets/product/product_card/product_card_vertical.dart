@@ -2,7 +2,6 @@ import 'package:ecommerceapp/common/styles/shadow_style.dart';
 import 'package:ecommerceapp/common/widgets/containers/rounded_container.dart';
 import 'package:ecommerceapp/common/widgets/icons/circular_icon.dart';
 import 'package:ecommerceapp/common/widgets/images/rounded_images.dart';
-import 'package:ecommerceapp/common/widgets/product/product_card/product_card_vertical.dart';
 import 'package:ecommerceapp/common/widgets/texts/brand_title_text_with_icon.dart';
 import 'package:ecommerceapp/common/widgets/texts/product_price.dart';
 import 'package:ecommerceapp/common/widgets/texts/product_title.dart';

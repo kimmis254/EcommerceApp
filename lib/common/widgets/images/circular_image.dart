@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/utils/constants/colors.dart';
-import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
