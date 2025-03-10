@@ -4,10 +4,13 @@ import 'package:ecommerceapp/common/widgets/images/circular_image.dart';
 import 'package:ecommerceapp/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerceapp/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:ecommerceapp/common/widgets/texts/section_heading.dart';
+import 'package:ecommerceapp/features/personalization/screens/profile/profile.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax/iconsax.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -34,7 +37,7 @@ class SettingsScreen extends StatelessWidget {
                 const SizedBox(
                   height: ESizes.spaceBtwItems,
                 ),
-                const EUserProfileTile(),
+                EUserProfileTile(onPressed: () => Get.to(() => const ProfileScreen()) ,),
                 const SizedBox(
                   height: ESizes.spaceBtwSections,
                 ),

@@ -6,8 +6,10 @@ import 'package:iconsax/iconsax.dart';
 
 class EUserProfileTile extends StatelessWidget {
   const EUserProfileTile({
-    super.key,
+    super.key, required this.onPressed,
   });
+
+  final VoidCallback onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class EUserProfileTile extends StatelessWidget {
       ),
       title: Text('Wayne Kathanzu', style: Theme.of(context).textTheme.headlineSmall!.apply(color: EColors.white)),
       subtitle: Text('kimmis254@gmail.com', style: Theme.of(context).textTheme.bodyMedium!.apply(color: EColors.white)),
-      trailing: IconButton(onPressed: () {}, icon: const Icon(Iconsax.edit, color: EColors.white)),
+      trailing: IconButton(onPressed: onPressed, icon: const Icon(Iconsax.edit, color: EColors.white)),
     );
   }
 }

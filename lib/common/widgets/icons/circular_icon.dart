@@ -34,7 +34,7 @@ class ECircularIcon extends StatelessWidget {
                 : Colors.transparent,
       ),
       child: IconButton(
-          onPressed: () {},
+          onPressed: onPressed,
           icon: Icon(
             icon,
             color: color,

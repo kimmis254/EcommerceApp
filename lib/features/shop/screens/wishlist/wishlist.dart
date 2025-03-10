@@ -24,9 +24,7 @@ class WishlistScreen extends StatelessWidget {
         actions: [
           ECircularIcon(
             icon: Iconsax.add,
-              onPressed: () {
-                Get.offAll(() => const HomeScreen()); // Clears navigation stack
-              },
+              onPressed: () => Get.to(() => const  HomeScreen())
           )
         ],
       ),
