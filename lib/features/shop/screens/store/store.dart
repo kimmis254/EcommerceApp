@@ -55,6 +55,7 @@ class StoreScreen extends StatelessWidget {
                         ESectionHeading(
                           title: 'Featured Brands',
                           onPressed: () {},
+                          space: ESizes.spaceBtwItems * 5,
                         ),
                         const SizedBox(height: ESizes.spaceBtwItems / 1.5),
                         EGridLayout(

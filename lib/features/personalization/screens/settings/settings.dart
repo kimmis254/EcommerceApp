@@ -8,6 +8,7 @@ import 'package:ecommerceapp/features/personalization/screens/profile/profile.da
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
+import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -18,6 +19,7 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final dark = EHelperFunctions.isDarkMode(context);
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
@@ -131,7 +133,7 @@ class SettingsScreen extends StatelessWidget {
                         style: Theme.of(context)
                             .textTheme
                             .bodyMedium!
-                            .apply(color: Colors.white),
+                            .apply(color: dark ? Colors.white : Colors.black),
                       ),
                     ),
                   ),

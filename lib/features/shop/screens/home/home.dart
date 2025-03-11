@@ -63,7 +63,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: ESizes.spaceBtwSections),
 
-                  ESectionHeading(title: 'Popular Products', onPressed: () {},),
+                  ESectionHeading(title: 'Popular Products', onPressed: () {},space: ESizes.spaceBtwItems * 5,),
                   const SizedBox(height: ESizes.spaceBtwItems),
 
                   EGridLayout(itemCount: 4,itemBuilder: (_,index) => const EProductCardVertical()),

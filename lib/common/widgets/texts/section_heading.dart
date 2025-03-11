@@ -3,14 +3,20 @@ import 'package:flutter/material.dart';
 
 class ESectionHeading extends StatelessWidget {
   const ESectionHeading({
-    super.key, this.textColor, this.showActionButton = true, required this.title,  this.buttonTitle = 'View All', this.onPressed,
+    super.key,
+    this.textColor,
+    this.showActionButton = true,
+    required this.title,
+    this.buttonTitle = 'View All',
+    this.onPressed,
+    this.space,
   });
 
   final Color? textColor;
   final bool showActionButton;
   final String title, buttonTitle;
   final void Function()? onPressed;
-
+  final double? space;
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +24,16 @@ class ESectionHeading extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineSmall!.apply(color: textColor),
+          style: Theme.of(context)
+              .textTheme
+              .headlineSmall!
+              .apply(color: textColor),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
-        SizedBox(width: ESizes.spaceBtwItems * 5),
-        if(showActionButton) TextButton(onPressed: onPressed, child: Text(buttonTitle)),
+        SizedBox(width: space),
+        if (showActionButton)
+          TextButton(onPressed: onPressed, child: Text(buttonTitle)),
       ],
     );
   }
