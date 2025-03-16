@@ -60,7 +60,13 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () => Get.to(() => const BottomNavigation()), child: Text(ETexts.signIn)
+                  onPressed: () => Get.to(() => const BottomNavigation()), 
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: EColors.primary,
+                      foregroundColor: EHelperFunctions.isDarkMode(context) ? EColors.white : EColors.black,
+                      side: BorderSide(color: Colors.transparent)
+                  ),
+                  child: Text(ETexts.signIn)
               ),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields),
@@ -68,6 +74,11 @@ class LoginForm extends StatelessWidget {
               width: double.infinity,
               child: OutlinedButton(
                   onPressed: () => Get.to(() => const SignupScreen()),
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: EColors.primary.withOpacity(0.3),
+                      foregroundColor: EHelperFunctions.isDarkMode(context) ? EColors.white : EColors.black,
+                      side: BorderSide(color: Colors.transparent)
+                  ),
                   child: Text(ETexts.createAccount)
               ),
             ),

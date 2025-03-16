@@ -95,6 +95,11 @@ class SignUpForm extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
             child: ElevatedButton(
               onPressed: () => Get.to(() => const  VerifyEmailScreen()),
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: EColors.primary,
+                  foregroundColor: EHelperFunctions.isDarkMode(context) ? EColors.white : EColors.black,
+                  side: BorderSide(color: Colors.transparent)
+              ),
               child: const Text(ETexts.createAccount),
             ),
           ),

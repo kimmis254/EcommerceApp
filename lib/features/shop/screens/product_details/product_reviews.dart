@@ -2,6 +2,7 @@ import 'package:ecommerceapp/common/widgets/appbar/appbar.dart';
 import 'package:ecommerceapp/common/widgets/product/product_rating/rating_indicator.dart';
 import 'package:ecommerceapp/features/shop/screens/product_details/overall_rating.dart';
 import 'package:ecommerceapp/features/shop/screens/product_details/product_ratings.dart';
+import 'package:ecommerceapp/features/shop/screens/product_details/user_review_card.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/device/device_utility.dart';
@@ -33,7 +34,9 @@ class ProductReviews extends StatelessWidget {
               Text('199', style: Theme.of(context).textTheme.bodySmall),
               const SizedBox(height: ESizes.spaceBtwSections),
 
-              
+              const UserReviewCard(),
+              const UserReviewCard(),
+
             ],
           ),
         ),
