@@ -32,5 +32,11 @@ class EImages {
   static const String user = "assets/images/common_images/user.png";
 
 
+  static const String mpesa = "assets/icons/mpesa.png";
+  static const String paypal = "assets/icons/paypa.png";
+  static const String mastercard = "assets/icons/mastercard.png";
+  static const String visa = "assets/icons/visa.png";
+
+
 
 }
