@@ -1,6 +1,9 @@
 import 'package:ecommerceapp/common/widgets/image_texts/vertical_image_text.dart';
+import 'package:ecommerceapp/features/shop/screens/sub_category/sub_categories.dart';
 import 'package:ecommerceapp/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class EHomeCategories extends StatelessWidget {
   const EHomeCategories({
@@ -18,8 +21,8 @@ class EHomeCategories extends StatelessWidget {
           itemBuilder: (_, index) {
             return EVerticalImageText(
               image: EImages.produceIcon,
-              title: 'Shoes ',
-              onTap: () {},
+              title: 'Fresh Produce',
+              onTap: () => Get.to(() => const SubCategoriesScreen()),
             );
           }),
     );
