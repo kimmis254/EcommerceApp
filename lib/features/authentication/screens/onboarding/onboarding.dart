@@ -8,6 +8,8 @@ import 'package:ecommerceapp/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'onboarding_pages.dart';
+
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
 
@@ -19,27 +21,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          PageView(
-            controller: controller.pageController,
-            onPageChanged: controller.updatePageIndicator,
-            children: [
-              OnBoardingScreen(
-                image: EImages.onBoarding1,
-                title: ETexts.onBoardingTitle1,
-                subTitle: ETexts.onBoardingSubTitle1,
-              ),
-              OnBoardingScreen(
-                image: EImages.onBoarding2,
-                title: ETexts.onBoardingTitle2,
-                subTitle: ETexts.onBoardingSubTitle2,
-              ),
-              OnBoardingScreen(
-                image: EImages.onBoarding3,
-                title: ETexts.onBoardingTitle3,
-                subTitle: ETexts.onBoardingSubTitle3,
-              )
-            ],
-          ),
+          OnBoardingPages(controller: controller),
           const OnBoardingSkip(),
           const OnBoardingDotNavigation(),
           const OnBoardingNextButton(),
@@ -48,5 +30,7 @@ class OnboardingScreen extends StatelessWidget {
     );
   }
 }
+
+
 
 

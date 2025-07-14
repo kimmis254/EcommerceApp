@@ -1,14 +1,17 @@
+import 'package:ecommerceapp/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:ecommerceapp/utils/constants/sizes.dart';
 import 'package:ecommerceapp/utils/constants/text_strings.dart';
 import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class ETermsAndConditions extends StatelessWidget {
   const ETermsAndConditions({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final controller = SignUpController.instance;
     final dark = EHelperFunctions.isDarkMode(context);
     double screenWidth = MediaQuery.of(context).size.width;
 
@@ -18,7 +21,9 @@ class ETermsAndConditions extends StatelessWidget {
         SizedBox(
           width: 24,
           height: 24,
-          child: Checkbox(value: true, onChanged: (value) {}),
+          child: Obx(() => Checkbox(
+              value: controller.privacyPolicy.value,
+              onChanged: (value) => controller.privacyPolicy.value = !controller.privacyPolicy.value)),
         ),
         const SizedBox(width: ESizes.spaceBtwInputFields),
 

@@ -1,4 +1,6 @@
+import 'package:ecommerceapp/bindings/general_bindings.dart';
 import 'package:ecommerceapp/features/authentication/screens/onboarding/onboarding.dart';
+import 'package:ecommerceapp/utils/constants/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/utils/theme/theme.dart';
 import 'package:get/get.dart';
@@ -23,7 +25,11 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: EcommAppTheme.lightTheme,
       darkTheme: EcommAppTheme.darkTheme,
-      home: const OnboardingScreen(),
+      initialBinding: GeneralBindings(),
+      home: const Scaffold(
+        backgroundColor: EColors.primary,
+        body: Center(child: CircularProgressIndicator(color: Colors.white))
+      ),
       debugShowCheckedModeBanner: false,
     );
   }

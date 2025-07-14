@@ -1,5 +1,13 @@
 class EValidator {
 
+  static String? validateEmptyText(String? fieldName, String? value) {
+    if (value == null || value.isEmpty){
+      return '$fieldName is required.';
+    }
+    return null;
+  }
+
+
   static String? validateEmail(String? value){
     if (value == null || value.isEmpty) {
       return 'Email is required.';
@@ -28,7 +36,7 @@ class EValidator {
       return 'Password must contain at least one uppercase letter.';
     }
 
-    if (!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>'))){
+    if (!value.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>]'))){
       return 'Password must contain at least one special character';
     }
 

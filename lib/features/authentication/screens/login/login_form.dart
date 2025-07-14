@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/bottom_navigation.dart';
+import 'package:ecommerceapp/features/authentication/controllers/signup/signup_controller.dart';
 import 'package:ecommerceapp/features/authentication/screens/password_configuration/forgot_password.dart';
 import 'package:ecommerceapp/features/authentication/screens/signup/signup.dart';
 import 'package:ecommerceapp/utils/constants/colors.dart';
@@ -8,9 +9,6 @@ import 'package:ecommerceapp/utils/helpers/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-
-
-
 
 class LoginForm extends StatelessWidget {
   const LoginForm({
@@ -22,23 +20,23 @@ class LoginForm extends StatelessWidget {
     final dark = EHelperFunctions.isDarkMode(context);
     return Form(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
-            vertical: ESizes.spaceBtwSections),
+        padding: const EdgeInsets.symmetric(vertical: ESizes.spaceBtwSections),
         child: Column(
           children: [
             TextFormField(
               decoration: InputDecoration(
-                prefix: Icon(Iconsax.direct_right),
-                labelText: ETexts.email,
-                floatingLabelStyle: TextStyle(color: dark ? EColors.white : EColors.black)
-              ),
+                  prefix: Icon(Iconsax.direct_right),
+                  labelText: ETexts.email,
+                  floatingLabelStyle:
+                      TextStyle(color: dark ? EColors.white : EColors.black)),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields),
             TextFormField(
               decoration: InputDecoration(
                   prefix: Icon(Iconsax.password_check),
                   labelText: ETexts.password,
-    floatingLabelStyle: TextStyle(color: dark ? EColors.white : EColors.black),
+                  floatingLabelStyle:
+                      TextStyle(color: dark ? EColors.white : EColors.black),
                   suffixIcon: Icon(Iconsax.eye_slash)),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields / 2),
@@ -60,14 +58,14 @@ class LoginForm extends StatelessWidget {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                  onPressed: () => Get.to(() => const BottomNavigation()), 
+                  onPressed: () => Get.to(() => const BottomNavigation()),
                   style: ElevatedButton.styleFrom(
                       backgroundColor: EColors.primary,
-                      foregroundColor: EHelperFunctions.isDarkMode(context) ? EColors.white : EColors.black,
-                      side: BorderSide(color: Colors.transparent)
-                  ),
-                  child: Text(ETexts.signIn)
-              ),
+                      foregroundColor: EHelperFunctions.isDarkMode(context)
+                          ? EColors.white
+                          : EColors.black,
+                      side: BorderSide(color: Colors.transparent)),
+                  child: Text(ETexts.signIn)),
             ),
             const SizedBox(height: ESizes.spaceBtwInputFields),
             SizedBox(
@@ -76,11 +74,11 @@ class LoginForm extends StatelessWidget {
                   onPressed: () => Get.to(() => const SignupScreen()),
                   style: OutlinedButton.styleFrom(
                       backgroundColor: EColors.primary.withOpacity(0.3),
-                      foregroundColor: EHelperFunctions.isDarkMode(context) ? EColors.white : EColors.black,
-                      side: BorderSide(color: Colors.transparent)
-                  ),
-                  child: Text(ETexts.createAccount)
-              ),
+                      foregroundColor: EHelperFunctions.isDarkMode(context)
+                          ? EColors.white
+                          : EColors.black,
+                      side: BorderSide(color: Colors.transparent)),
+                  child: Text(ETexts.createAccount)),
             ),
           ],
         ),
